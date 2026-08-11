@@ -68,8 +68,10 @@ h2.section-title .accent{color:var(--gold);}
 .gallery-3 a:hover img{transform:scale(1.06);}
 
 /* Video */
-.video-wrap{max-width:420px;margin:0 auto;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:#000;box-shadow:0 10px 30px rgba(16,32,46,.15);}
+.video-grid{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
+.video-wrap{width:100%;max-width:340px;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:#000;box-shadow:0 10px 30px rgba(16,32,46,.15);}
 .video-wrap iframe{width:100%;height:100%;border:0;display:block;}
+.video-wrap.priority{max-width:380px;box-shadow:0 14px 38px rgba(16,32,46,.28);border-color:var(--gold);border-width:2px;}
 
 /* Description */
 .desc-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start;}
@@ -192,8 +194,13 @@ footer a{color:var(--navy);text-decoration:underline;}
     <div class="section-title-line"></div>
     <h2 class="section-title">Vídeo do apartamento</h2>
     <p class="lede">Um tour rápido pelo imóvel e pela vista.</p>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/ef31p1A4Lpw" title="Vídeo do apartamento - Tamarineira Prince Vanguard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div class="video-grid">
+      <div class="video-wrap priority">
+        <iframe src="https://www.youtube.com/embed/JnRdXqOo4xE" title="Vídeo do apartamento - Tamarineira Prince Vanguard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/ef31p1A4Lpw" title="Vídeo do apartamento - Tamarineira Prince Vanguard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
     </div>
   </div>
 </section>
