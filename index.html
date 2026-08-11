@@ -68,10 +68,21 @@ h2.section-title .accent{color:var(--gold);}
 .gallery-3 a:hover img{transform:scale(1.06);}
 
 /* Video */
-.video-grid{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
-.video-wrap{width:100%;max-width:340px;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:#000;box-shadow:0 10px 30px rgba(16,32,46,.15);}
+.video-grid{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;align-items:flex-start;}
+.video-item{width:100%;max-width:340px;}
+.video-wrap{width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:#000;box-shadow:0 10px 30px rgba(16,32,46,.15);}
 .video-wrap iframe{width:100%;height:100%;border:0;display:block;}
-.video-wrap.priority{max-width:380px;box-shadow:0 14px 38px rgba(16,32,46,.28);border-color:var(--gold);border-width:2px;}
+.video-item.priority .video-wrap{max-width:380px;box-shadow:0 14px 38px rgba(16,32,46,.28);border-color:var(--gold);border-width:2px;}
+.video-item.priority{max-width:380px;}
+.video-caption{margin-top:10px;font-size:12.5px;color:var(--grey);text-align:center;}
+
+/* Book / material */
+.btn-outline-navy{background:transparent;color:var(--navy);border:1px solid var(--navy);}
+.btn-outline-navy:hover{background:var(--navy);color:#fff;}
+.material-card{margin-top:28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 24px;}
+.material-card .material-text{flex:1;min-width:220px;}
+.material-card .material-text b{color:var(--navy);display:block;margin-bottom:4px;}
+.material-card .material-text span{font-size:13px;color:var(--grey);}
 
 /* Description */
 .desc-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start;}
@@ -192,15 +203,39 @@ footer a{color:var(--navy);text-decoration:underline;}
 <section id="video" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-title-line"></div>
-    <h2 class="section-title">Vídeo do apartamento</h2>
-    <p class="lede">Um tour rápido pelo imóvel e pela vista.</p>
+    <h2 class="section-title">Vídeos e material do empreendimento</h2>
+    <p class="lede">Um tour rápido pelo imóvel e pela vista, além de material oficial do condomínio.</p>
     <div class="video-grid">
-      <div class="video-wrap priority">
-        <iframe src="https://www.youtube.com/embed/JnRdXqOo4xE" title="Vídeo do apartamento - Tamarineira Prince Vanguard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="video-item priority">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/JnRdXqOo4xE" title="Vídeo do apartamento - Tamarineira Prince Vanguard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
       </div>
-      <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/ef31p1A4Lpw" title="Vídeo do apartamento - Tamarineira Prince Vanguard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="video-item">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/ef31p1A4Lpw" title="Vídeo do apartamento - Tamarineira Prince Vanguard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
       </div>
+      <div class="video-item">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/Dg-N1nyY7CE" title="Vídeo de divulgação - Pernambuco Construtora" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="video-caption">Vídeo: Pernambuco Construtora</div>
+      </div>
+      <div class="video-item">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/yeTQXKASzHQ" title="Vídeo de divulgação - Pernambuco Construtora" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="video-caption">Vídeo: Pernambuco Construtora</div>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <div class="material-text">
+        <b>Book do empreendimento</b>
+        <span>Material oficial de divulgação · Pernambuco Construtora</span>
+      </div>
+      <a class="btn btn-outline-navy" href="https://www.pernambucoconstrutora.com.br/repositorio/arquivos-dos-empreendimentos/booktamarineiraprince-17285066260451.pdf#page=22.00" target="_blank" rel="noopener">Ver o book (PDF) ↗</a>
     </div>
   </div>
 </section>
